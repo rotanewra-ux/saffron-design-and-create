@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saffron Design & Create</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @keyframes carousel {
+      0%, 28% {
+        transform: translateX(0%);
+      }
+      33%, 61% {
+        transform: translateX(-100%);
+      }
+      66%, 94% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    .carousel-track {
+      animation: carousel 15s infinite ease-in-out;
+    }
+  </style>
 </head>
 
 <body class="bg-orange-50 text-gray-800 font-sans">
@@ -65,42 +86,47 @@
         </p>
       </div>
 
-      <div class="flex gap-8 overflow-x-auto pb-6 snap-x">
-
-        <div class="min-w-[320px] md:min-w-[380px] bg-orange-50 rounded-3xl overflow-hidden shadow-lg snap-center">
-          <img src="downs1.png" alt="Training workshop" class="h-60 w-full object-cover">
-          <div class="p-8">
-            <h3 class="text-3xl font-bold text-orange-700 mb-4">Training</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Creative workshops, digital skills, practical learning and development sessions for individuals, groups and organisations.
-            </p>
+      <div class="overflow-hidden rounded-3xl shadow-2xl bg-orange-50 max-w-5xl mx-auto">
+        <div class="carousel-track flex w-[300%]">
+          
+          <div class="w-1/3 flex-shrink-0 grid md:grid-cols-2">
+            <img src="downs1.png" alt="Training workshop" class="h-[460px] w-full object-cover">
+            <div class="p-10 md:p-14 flex flex-col justify-center">
+              <p class="uppercase tracking-widest text-orange-700 font-semibold mb-3">Training</p>
+              <h3 class="text-4xl font-bold mb-5">Learn creative and practical skills</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Creative workshops, digital skills, practical learning and development sessions for individuals, groups and organisations.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="min-w-[320px] md:min-w-[380px] bg-orange-50 rounded-3xl overflow-hidden shadow-lg snap-center">
-          <img src="print1.png" alt="Printing services" class="h-60 w-full object-cover">
-          <div class="p-8">
-            <h3 class="text-3xl font-bold text-orange-700 mb-4">Printing</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Flyers, posters, banners, promotional materials and community print solutions for projects, campaigns and events.
-            </p>
+          <div class="w-1/3 flex-shrink-0 grid md:grid-cols-2">
+            <img src="print1.png" alt="Printing services" class="h-[460px] w-full object-cover">
+            <div class="p-10 md:p-14 flex flex-col justify-center">
+              <p class="uppercase tracking-widest text-orange-700 font-semibold mb-3">Printing</p>
+              <h3 class="text-4xl font-bold mb-5">Print materials that make an impact</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Flyers, posters, banners, promotional materials and community print solutions for projects, campaigns and events.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="min-w-[320px] md:min-w-[380px] bg-orange-50 rounded-3xl overflow-hidden shadow-lg snap-center">
-          <img src="event1.png" alt="Community events" class="h-60 w-full object-cover">
-          <div class="p-8">
-            <h3 class="text-3xl font-bold text-orange-700 mb-4">Events</h3>
-            <p class="text-gray-700 leading-relaxed">
-              Community events, creative showcases, networking sessions and activities that bring people together.
-            </p>
+          <div class="w-1/3 flex-shrink-0 grid md:grid-cols-2">
+            <img src="event1.png" alt="Community events" class="h-[460px] w-full object-cover">
+            <div class="p-10 md:p-14 flex flex-col justify-center">
+              <p class="uppercase tracking-widest text-orange-700 font-semibold mb-3">Events</p>
+              <h3 class="text-4xl font-bold mb-5">Bring people together</h3>
+              <p class="text-gray-700 text-lg leading-relaxed">
+                Community events, creative showcases, networking sessions and activities that connect and inspire people.
+              </p>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
 
-      <p class="text-center text-sm text-gray-500 mt-4">
-        Swipe or scroll sideways to view services.
+      <p class="text-center text-sm text-gray-500 mt-6">
+        Carousel rotates automatically through our services.
       </p>
     </div>
   </section>
